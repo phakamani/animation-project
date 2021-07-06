@@ -21,6 +21,12 @@
         [ngClass]="{
           'is-one-opacity' : showLoadingMessage
         }">Loading.....</div>
+      <div *ngIf="response && !showLoadingMessage" style="color: green;">
+        {{response}}
+      </div>
+      <div *ngIf="error && !showLoadingMessage" style="color: red;">
+        {{error}}
+      </div>
     </div>
   </div>
 </div>
